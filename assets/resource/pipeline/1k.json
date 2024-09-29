@@ -1,0 +1,33 @@
+{
+    "打开": {
+        "recognition":"TemplateMatch",
+        "template":"123.png",
+        "action":"Click",
+        "next":[
+            "向下滑动"
+        ]
+    },
+    "向下滑动":{
+        "action":"Swipe",
+        "begin":[
+            100, 500, 10, 10
+        ],
+        "end":[
+            100, 100, 10, 10
+        ],
+        "next":[
+            "打开游戏"
+        ]
+    },
+    "点击游戏":{
+        "recognition":"TemplateMatch",
+        "template":"游戏.png",
+        "action":"Click"   
+    },    
+    "打开游戏":{
+       "recognition":"OCR",
+       "expected":"游戏",
+       "action":"Click"
+    }
+    
+}
